@@ -54,7 +54,8 @@ hr {
 }
 
 .img-full {
-    min-width: 100%;
+    min-width: 400px;
+    height: auto;
 }
 
 .brand-before,
@@ -189,4 +190,10 @@ footer p {
         display: table;
         clear: both;
     }
+}
+
+
+img.resize-slider{
+    width:800px; /* you can use % */
+    height: auto;
 }
