@@ -33,7 +33,7 @@
 <body>
 
     <div class="brand">Fran e Andre</div>
-    <div class="address-bar">( ...em  manutenção )</div>
+    <div id="countdown" class="address-bar"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -47,7 +47,11 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Fran e Andre</a>
+                <a class="navbar-brand" href="index.html">
+                        Fran e Andre
+                        <br>
+                        <small id="countdown"></small>
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -166,6 +170,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/countdown.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
