@@ -82,7 +82,7 @@ hr {
     margin-bottom: 20px;
     padding: 30px 15px;
     background: #fff;
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.80);
 }
 
 .intro-text {
@@ -220,10 +220,11 @@ img.resize-slider{
 .transparent-item{
             color: rgba(255,255,255,0);
       }
-
+/*
 @media screen and (min-width: 960px) {
     .transparent-item{
             color: rgba(255,255,255,0);
             height: 320px;
       }
   }
+  */
