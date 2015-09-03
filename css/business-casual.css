@@ -149,8 +149,6 @@ footer p {
         color: #fff;
     }
 
-
-
     .navbar {
         border-radius: 0;
     }
@@ -212,3 +210,8 @@ img.resize-slider{
         letter-spacing: 3px;
         color: #fff;
     }
+
+    #map {
+        width: 700px;
+        height: 400px;
+      }
