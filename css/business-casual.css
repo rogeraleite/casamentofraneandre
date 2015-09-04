@@ -220,6 +220,8 @@ img.resize-slider{
 .transparent-item{
             color: rgba(255,255,255,0);
       }
+
+audio { width: 150px; display: block; margin:20px; }
 /*
 @media screen and (min-width: 960px) {
     .transparent-item{
@@ -228,3 +230,8 @@ img.resize-slider{
       }
   }
   */
+
+  .blesser-img{
+    height:200px;
+    width:150px;
+  }
