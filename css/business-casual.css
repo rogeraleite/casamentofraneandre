@@ -58,6 +58,12 @@ hr {
     height: auto;
 }
 
+.img-slide {
+    min-width: 400px;
+    height: 400;
+    width: auto;
+}
+
 .brand-before,
 .brand-name {
     text-transform: capitalize;
@@ -231,7 +237,18 @@ audio { width: 150px; display: block; margin:20px; }
   }
   */
 
-  .blesser-img{
-    height:200px;
-    width:150px;
+  .centerize{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  .blesser-img{
+    height:150px;
+    width:150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:  0px;
+  }
+
