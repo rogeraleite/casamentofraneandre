@@ -218,7 +218,7 @@ img.resize-slider{
     }
 
     #map {
-        height: 400px;
+        height: 350px;
         width: 100%;
       }
 
@@ -241,6 +241,7 @@ audio { width: 150px; display: block; margin:20px; }
     display: block;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 
   .blesser-img{
