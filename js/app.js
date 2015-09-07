@@ -10,6 +10,7 @@ App.Router.map(function() {
   this.resource('noivos', function() {});
   this.resource('local', function() {});
   this.resource('confirmacao', function() {});
+  this.resource('confirmado', function() {});
 });
 
 App.LocalController = Ember.ObjectController.extend({
