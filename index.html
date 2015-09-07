@@ -22,6 +22,16 @@
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/handlebars-1.0.0.js"></script>
+    <script src="js/ember-1.0.0.js"></script>
+    <script src="js/ember-data.js"></script>
+    <script src="js/app.js"></script>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,7 +42,7 @@
 </head>
 
 <body>
-
+    <script type="text/x-handlebars">
     <div class="brand">Fran e Andre</div>
     <!--div id="countdown" class="address-bar"></div-->
 
@@ -58,18 +68,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                    {{#link-to "index" tagName="li"}}<a>Noivos</a>{{/link-to}}
+                    {{#link-to "padrinhos" tagName="li"}}<a>Padrinhos</a>{{/link-to}}
+                    {{#link-to "local" tagName="li"}}<a  id="local">Local</a>{{/link-to}}
+                    {{#link-to "confirmacao" tagName="li"}}<a>Confirmação</a>{{/link-to}}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -77,10 +79,24 @@
         <!-- /.container -->
     </nav>
 
+  <div class="container">
+    {{outlet}}
+  </div>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Casamento Fran e Andre - 21/11/2015 - Av. Coronel Marcos, 1085, bairro Ipanema</p>
+                </div>
 
-    <div class="container">
+                    <!--audio  preload="auto" id="id12" controls="controls" onended="func12();" src="music/music.mp3"></audio-->
+            </div>
+        </div>
+    </footer>
+</script>
 
+<script type="text/x-handlebars" data-template-name="index">
         <div class="row">
             <div class="box">
                 <div class="col-lg-12 text-center">
@@ -157,7 +173,9 @@
                 </div>
             </div>
         </div>
+</script>
 
+<script type="text/x-handlebars" data-template-name="padrinhos">
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
@@ -178,9 +196,9 @@
                     </h2>
                     <hr>
                     <div class="centerize">
-                            <img src="img/p1.jpg" class="col-sm-3 col-md-3 img-circle img-responsive blesser-img">
-                            <img src="img/p2.jpg" class="col-sm-3 col-md-3 img-circle img-responsive blesser-img">
-                            <img src="img/p3.jpg" class="col-sm-3 col-md-3 img-circle img-responsive blesser-img">
+                            <img src="img/p1.jpg" class="col-sm-4 col-md-4 img-circle img-responsive blesser-img">
+                            <img src="img/p2.jpg" class="col-sm-4 col-md-4 img-circle img-responsive blesser-img">
+                            <img src="img/p3.jpg" class="col-sm-4 col-md-4 img-circle img-responsive blesser-img">
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 centerize">
@@ -199,7 +217,9 @@
                     <div class="clearfix"></div>
             </div>
         </div>
+</script>
 
+<script type="text/x-handlebars" data-template-name="confirmacao">
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
@@ -208,7 +228,7 @@
                         <strong>Presença</strong>
                     </h2>
                     <hr>
-                    <form action="//formspree.io/francielekb@me.com"
+                    <form action="//formspree.io/rogeraleite@gmail.com"
                                class="col-sm-12 col-md-12 col-lg-12"
                                method="POST">
 
@@ -222,11 +242,15 @@
                                 <input type="submit" class="btn btn-default btn-lg" value="Confirmar">
 
                             <input type="hidden" name="_subject" value="Confirmação no casório!!" />
-                            <input type="hidden" name="_next" value="confirmacao.html" />
+
+                            <input type="hidden" name="_next" value="#/confirmado.html" />
                     </form>
                     <div class="clearfix"></div>
             </div>
         </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="local">
 
         <div class="row">
             <div class="box">
@@ -239,6 +263,8 @@
                     <hr>
                 <div class="col-sm-8 col-md-8 col-lg-8" >
                     <div id="map" class="map"></div>
+
+                    <button id="showmap" class="btn btn-default btn-lg" onclick="displayMap()">Mostrar Mapa</button>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <p>Escolhemos para este dia um lugar muito especial, com vista para o Guaíba e repleto de natureza.</p>
@@ -249,40 +275,22 @@
                 <div class="clearfix"></div>
             </div>
         </div>
+</script>
 
-
-
-    </div>
-    <!-- /.container -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Casamento Fran e Andre - 21/11/2015 - Av. Coronel Marcos, 1085, bairro Ipanema</p>
-                </div>
-
-                    <!--audio  preload="auto" id="id12" controls="controls" onended="func12();" src="music/music.mp3"></audio-->
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/countdown.js"></script>
+    <!-- Script to Activate the Carousel -->
+
     <script src="js/map.js"></script>
 
-    <!-- Script to Activate the Carousel -->
     <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
+         $('.carousel').carousel({
+              interval: 5000 //changes the speed
+         })
     </script>
-
 </body>
 
 

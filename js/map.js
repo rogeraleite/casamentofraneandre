@@ -1,4 +1,9 @@
-function initialize() {
+
+    function displayMap() {
+            document.getElementById('map').style.display="block";
+            initialize();
+    }
+    function initialize() {
         var mapCanvas = document.getElementById('map');
         var myLatLng = {lat:-30.1243249 ,lng: -51.2461573};
         var mapOptions = {
@@ -13,5 +18,8 @@ function initialize() {
                                          title: 'Cerimônia & Festa'
                                      });
       }
-      google.maps.event.addDomListener(window, 'resize', initialize);
-      google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+        google.maps.event.addDomListener(window, 'resize', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize);

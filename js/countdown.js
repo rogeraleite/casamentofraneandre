@@ -34,4 +34,3 @@
 
         timer = setInterval(showRemaining, 1000);
     }
-
