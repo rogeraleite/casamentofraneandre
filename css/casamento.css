@@ -227,7 +227,7 @@ img.resize-slider{
             color: rgba(255,255,255,0);
       }
 
-audio { width: 150px; display: block; margin:20px; }
+audio { width: 350px; display: block; margin:20px; }
 /*
 @media screen and (min-width: 960px) {
     .transparent-item{
