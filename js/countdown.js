@@ -26,7 +26,7 @@
             var minutes = Math.floor((distance % _hour) / _minute);
             var seconds = Math.floor((distance % _minute) / _second);
 
-            $('#'+id).text(days + ' days ');
+            $('#'+id).text(days + ' dias ');
             $('#'+id).append(hours + ' hrs ');
             $('#'+id).append(minutes + ' mins ');
             $('#'+id).append(seconds + ' secs');
