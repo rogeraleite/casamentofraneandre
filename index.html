@@ -15,11 +15,22 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/business-casual.css" rel="stylesheet">
+    <link href="css/casamento.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/handlebars-1.0.0.js"></script>
+    <script src="js/ember-1.0.0.js"></script>
+    <script src="js/ember-data.js"></script>
+    <script src="js/app.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,9 +42,11 @@
 </head>
 
 <body>
-
+    <script type="text/x-handlebars">
     <div class="brand">Fran e Andre</div>
-    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
+    <!--div id="countdown" class="address-bar"></div-->
+
+     <div id="countdown" class="address-bar"></div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -47,23 +60,18 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Business Casual</a>
+                <a class="navbar-brand" href="index.html">
+                        Fran e Andre
+                        <!--div id="countdown2" class="countdown"></div-->
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                    {{#link-to "index" tagName="li"}}<a>Noivos</a>{{/link-to}}
+                    {{#link-to "padrinhos" tagName="li"}}<a>Padrinhos</a>{{/link-to}}
+                    {{#link-to "local" tagName="li"}}<a  id="local">Local</a>{{/link-to}}
+                    {{#link-to "confirmacao" tagName="li"}}<a>Confirmação</a>{{/link-to}}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -71,8 +79,26 @@
         <!-- /.container -->
     </nav>
 
-    <div class="container">
+  <div class="container">
+    {{outlet}}
+  </div>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Casamento Fran e Andre - 21/11/2015 - Av. Coronel Marcos, 1085, bairro Ipanema</p>
+                </div>
+
+                    <audio class="col-sm-12 col-md-12"  preload="auto" autoplay="autoplay" loop="loop" id="id12" controls="controls" onended="func12();" src="music/music.mp3"></audio>
+            </div>
+        </div>
+
+    </footer>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+        <h5 class="visible-xs-12 hidden-sm hidden-md hidden-lg centerize" id="countdown2"></h5>
         <div class="row">
             <div class="box">
                 <div class="col-lg-12 text-center">
@@ -82,18 +108,26 @@
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="img/slide-1.jpg" alt="">
+                                <img class="img-responsive" src="img/home/HOME1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-2.jpg" alt="">
+                                <img class="img-responsive" src="img/home/HOME2.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slide-3.jpg" alt="">
+                                <img class="img-responsive" src="img/home/HOME3.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="img/home/HOME4.JPG" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="img-responsive" src="img/home/HOME5.jpg" alt="">
                             </div>
                         </div>
 
@@ -106,76 +140,178 @@
                         </a>
                     </div>
                     <h2 class="brand-before">
-                        <small>Welcome to</small>
+                        <small>Bem vindos ao nosso site!</small>
                     </h2>
-                    <h1 class="brand-name">Business Casual</h1>
+                    <!--h1 class="brand-name">Business Casual</h1-->
+                    <p>Estamos muito felizes em poder comemorar esse momento tão especial com cada um de vocês!</p>
+
+                    <p>Uma nova fase de nossas vidas se inicia...
+                    Pensando nisso, registramos aqui alguns momentos vividos juntos, através de fotos, deixando também o registro intangível: a emoção de estar transformando nossas vidas e, ao mesmo tempo, compartilhar isso com pessoas queridas, como nossa família e amigos.</p>
+
+                    <p>Aqui vocês encontrarão informações sobre o nosso casamento e poderão confirmar sua presença.</p>
+
+                    <p>Esperamos vocês no dia 21 de novembro!</p>
                     <hr class="tagline-divider">
                     <h2>
-                        <small>By
-                            <strong>Start Bootstrap</strong>
+                        <small>Com carinho,
+                            <strong>Franciele e Andre.</strong>
                         </small>
                     </h2>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Build a website
-                        <strong>worth visiting</strong>
-                    </h2>
-                    <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
-                    <hr class="visible-xs">
-                    <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
-                    <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </div>
-            </div>
-        </div>
 
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Beautiful boxes
-                        <strong>to showcase your content</strong>
+                    <h2 class="intro-text text-center">Sobre os
+                        <strong>Noivos</strong>
                     </h2>
                     <hr>
-                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                    <p>Nós nos conhecemos por meio de amigos em comum e, depois de algumas saídas e viagens com esse grupo de amigos, resolvemos nos conhecer melhor.
+                            Prontamente, descobrimos muita coisa em comum, o que nos aproximou e nos fez oficializar nossa relação como namorados, em setembro de 2011.</p>
+                    <p>Desde o início nossa relação foi diferente, uma relação tranquila e de muita parceria.</p>
+                    <p>E não tem como falar da gente sem falar dos nossos cachorros, né?! Nossos filhos de quatro patas, que fazem a nossa vida e nosso dia a dia muito mais feliz.
+                           É um pouco de tudo isso que faz nosso casamento ser uma decisão tão leve, tão fácil e tão gostosa.</p>
+                    <p>Cada detalhe desse grande dia está sendo preparado com muito carinho. Contamos com a animação e presença de todos para tornarem o nosso casamento inesquecível!</p>
                 </div>
             </div>
         </div>
+</script>
 
-    </div>
-    <!-- /.container -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
+<script type="text/x-handlebars" data-template-name="padrinhos">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Sobre os
+                        <strong>Padrinhos</strong>
+                    </h2>
+                    <hr>
+                    <p>Existe uma frase que diz: "as pessoas entram nas nossas vidas por acaso, mas não é por acaso que elas permanecem". Acreditamos muito nisso.</p>
+                    <p>No meio de tanta gente querida, algumas acabam fazendo um papel diferente em nossas vidas, o que as tornam únicas. </p>
+                    <p>Temos a sorte de conhecer esses amigos que, de tão queridos por nós, foram escolhidos para fazer parte de uma forma especial neste dia tão importante: sendo nossos padrinhos.</p>
+                    <p>Não poderíamos dizer o <strong>"SIM"</strong> sem vocês do lado!</p>
                 </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 centerize">
+                    <hr>
+                    <h2 class="intro-text text-center centerize">
+                        <strong>Eles</strong>
+                    </h2>
+                    <hr>
+                    <div class="centerize">
+                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/roger.jpg" class="img-circle img-responsive blesser-img">Roger</div>
+                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/leonardo.jpg" class="img-circle img-responsive blesser-img">Leonardo</div>
+                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/digao.jpg" class="img-circle img-responsive blesser-img">Rodrigo</div>
+                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/guilherme.jpg" class="img-circle img-responsive blesser-img">Guilherme</div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 centerize">
+                    <hr>
+                    <h2 class="intro-text text-center centerize">
+                        <strong>Elas</strong>
+                    </h2>
+                    <hr>
+                    <div class="centerize">
+                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/mari.jpg" class="img-circle img-responsive blesser-img">Mari</div>
+                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/naty.JPG" class="img-circle img-responsive blesser-img">Naty</div>
+                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/fe.jpg" class="img-circle img-responsive blesser-img">Fe</div>
+                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/p7.jpg" class="img-circle img-responsive blesser-img">Todas</div>
+                     </div>
+
+                    </div>
+                    <hr>
+                    <div class="clearfix"></div>
             </div>
         </div>
-    </footer>
+</script>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<script type="text/x-handlebars" data-template-name="confirmacao">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Confirmação de
+                        <strong>Presença</strong>
+                    </h2>
+                    <hr>
+                    <form action="//formspree.io/francielekb@me.com"
+                               class="col-sm-12 col-md-12 col-lg-12"
+                               method="POST">
+                            <div>
+                                <p>Confirme sua presença aqui:  </p>
+                                <p><strong>* </strong><small>Por favor, preencher um <strong>nome + sobrenome</strong> de cada vez.</small></p>
+                            </div>
+                                <input type="text" name="name" class="form-control">
+                                <br>
+                                <p>Telefone:</p>
+                                <input type="text" name="telefone" class="form-control">
+                                <!--input type="email" name="_replyto"-->
+                                <br>
+                                <input type="submit" class="btn btn-default btn-lg" value="Confirmar">
+
+                            <input type="hidden" name="_subject" value="Confirmação no casório!!" />
+
+                            <input type="hidden" name="_next" value="confirmado.html" />
+                    </form>
+                    <div class="clearfix"></div>
+            </div>
+        </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="local" onload="displayMap();">
+
+        <div class="row">
+            <div class="box">
+                <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Cerimônia </strong>
+                        &
+                        <strong> Festa</strong>
+                    </h2>
+                    <hr>
+                <div class="col-sm-8 col-md-8 col-lg-8" >
+                    <div id="map" class="map"></div>
+
+                    <button id="showmap" class="btn btn-default btn-lg" onclick="displayMap()">Mostrar Mapa</button>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <p>Escolhemos para este dia um lugar muito especial, com vista para o Guaíba e repleto de natureza.</p>
+                    <p>A cerimônia e a festa acontecerão neste mesmo local, o Jardins Eventos.</p>
+                    <p>Fica na <strong>Av. Coronel Marcos, 1085, bairro Ipanema</strong> <small>(bem em frente a AABB).</small></p>
+                </div>
+                <!--div class="transparent-item">.</div-->
+                <div class="clearfix"></div>
+            </div>
+        </div>
+</script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/countdown.js"></script>
     <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
 
+    <script src="js/map.js"></script>
+
+    <script>
+         $('.carousel').carousel({
+              interval: 5000 //changes the speed
+         })
+    </script>
+    <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-67700859-1', 'auto');
+                ga('send', 'pageview');
+        </script>
 </body>
+
 
 </html>

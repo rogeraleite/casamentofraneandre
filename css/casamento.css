@@ -54,7 +54,14 @@ hr {
 }
 
 .img-full {
-    min-width: 100%;
+    min-width: 400px;
+    height: auto;
+}
+
+.img-slide {
+    min-width: 400px;
+    height: 400;
+    width: auto;
 }
 
 .brand-before,
@@ -81,7 +88,7 @@ hr {
     margin-bottom: 20px;
     padding: 30px 15px;
     background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.80);
 }
 
 .intro-text {
@@ -104,12 +111,12 @@ hr {
 
 footer {
     background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.80);
 }
 
 footer p {
     margin: 0;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 @media screen and (min-width:768px) {
@@ -167,7 +174,7 @@ footer p {
     }
 
     .nav>li>a {
-        padding: 35px;
+        padding: 25px 30px;
     }
 
     .navbar-nav>li>a {
@@ -190,3 +197,59 @@ footer p {
         clear: both;
     }
 }
+
+
+img.resize-slider{
+    width:800px; /* you can use % */
+    height: auto;
+}
+
+    div.countdown{
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+
+    #map {
+        height: 350px;
+        width: 100%;
+      }
+
+
+.transparent-item{
+            color: rgba(255,255,255,0);
+      }
+
+audio { width: 350px; display: block; margin:20px; }
+/*
+@media screen and (min-width: 960px) {
+    .transparent-item{
+            color: rgba(255,255,255,0);
+            height: 320px;
+      }
+  }
+  */
+
+  .centerize{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .blesser-img{
+    height:150px;
+    width:150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:  0px;
+  }
+
