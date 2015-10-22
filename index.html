@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -43,61 +43,67 @@
 
 <body>
     <script type="text/x-handlebars">
-    <div class="brand">Fran e Andre</div>
-    <!--div id="countdown" class="address-bar"></div-->
+        <div class="brand">Fran e Andre</div>
+        <!--div id="countdown" class="address-bar"></div-->
 
-     <div id="countdown" class="address-bar"></div>
+        <div id="countdown" class="address-bar"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                    <a class="navbar-brand" href="index.html">
                         Fran e Andre
                         <!--div id="countdown2" class="countdown"></div-->
-                </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    {{#link-to "index" tagName="li"}}<a>Noivos</a>{{/link-to}}
-                    {{#link-to "padrinhos" tagName="li"}}<a>Padrinhos</a>{{/link-to}}
-                    {{#link-to "local" tagName="li"}}<a  id="local">Local</a>{{/link-to}}
-                    {{#link-to "confirmacao" tagName="li"}}<a>Confirmação</a>{{/link-to}}
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-  <div class="container">
-    {{outlet}}
-  </div>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Casamento Fran e Andre - 21/11/2015 - Av. Coronel Marcos, 1085, bairro Ipanema</p>
+                    </a>
                 </div>
-
-                    <audio class="col-sm-12 col-md-12"  preload="auto" autoplay="autoplay" loop="loop" id="id12" controls="controls" onended="func12();" src="music/music.mp3"></audio>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        {{#link-to "index" tagName="li"}}
+                        <a>Noivos</a>{{/link-to}}
+                        {{#link-to "padrinhos" tagName="li"}}
+                        <a>Padrinhos</a>{{/link-to}}
+                        {{#link-to "local" tagName="li"}}
+                        <a id="local">Local</a>{{/link-to}}
+                        {{#link-to "presentes" tagName="li"}}
+                        <a id="presentes">Presentes</a>{{/link-to}}
+                        {{#link-to "confirmacao" tagName="li"}}
+                        <a>Confirmação</a>{{/link-to}}
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
+            <!-- /.container -->
+        </nav>
+
+        <div class="container">
+            {{outlet}}
         </div>
 
-    </footer>
-</script>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>Casamento Fran e Andre - 21/11/2015 - Av. Coronel Marcos, 1085, bairro Ipanema</p>
+                    </div>
 
-<script type="text/x-handlebars" data-template-name="index">
+                    <audio class="col-sm-12 col-md-12" preload="auto" autoplay="autoplay" loop="loop" id="id12" controls="controls" onended="func12();" src="music/music.mp3"></audio>
+                </div>
+            </div>
+
+        </footer>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="index">
         <h5 class="visible-xs-12 hidden-sm hidden-md hidden-lg centerize" id="countdown2"></h5>
         <div class="row">
             <div class="box">
@@ -145,15 +151,18 @@
                     <!--h1 class="brand-name">Business Casual</h1-->
                     <p>Estamos muito felizes em poder comemorar esse momento tão especial com cada um de vocês!</p>
 
-                    <p>Uma nova fase de nossas vidas se inicia...
-                    Pensando nisso, registramos aqui alguns momentos vividos juntos, através de fotos, deixando também o registro intangível: a emoção de estar transformando nossas vidas e, ao mesmo tempo, compartilhar isso com pessoas queridas, como nossa família e amigos.</p>
+                    <p>
+                        Uma nova fase de nossas vidas se inicia...
+                        Pensando nisso, registramos aqui alguns momentos vividos juntos, através de fotos, deixando também o registro intangível: a emoção de estar transformando nossas vidas e, ao mesmo tempo, compartilhar isso com pessoas queridas, como nossa família e amigos.
+                    </p>
 
                     <p>Aqui vocês encontrarão informações sobre o nosso casamento e poderão confirmar sua presença.</p>
 
                     <p>Esperamos vocês no dia 21 de novembro!</p>
                     <hr class="tagline-divider">
                     <h2>
-                        <small>Com carinho,
+                        <small>
+                            Com carinho,
                             <strong>Franciele e Andre.</strong>
                         </small>
                     </h2>
@@ -166,27 +175,33 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Sobre os
+                    <h2 class="intro-text text-center">
+                        Sobre os
                         <strong>Noivos</strong>
                     </h2>
                     <hr>
-                    <p>Nós nos conhecemos por meio de amigos em comum e, depois de algumas saídas e viagens com esse grupo de amigos, resolvemos nos conhecer melhor.
-                            Prontamente, descobrimos muita coisa em comum, o que nos aproximou e nos fez oficializar nossa relação como namorados, em setembro de 2011.</p>
+                    <p>
+                        Nós nos conhecemos por meio de amigos em comum e, depois de algumas saídas e viagens com esse grupo de amigos, resolvemos nos conhecer melhor.
+                        Prontamente, descobrimos muita coisa em comum, o que nos aproximou e nos fez oficializar nossa relação como namorados, em setembro de 2011.
+                    </p>
                     <p>Desde o início nossa relação foi diferente, uma relação tranquila e de muita parceria.</p>
-                    <p>E não tem como falar da gente sem falar dos nossos cachorros, né?! Nossos filhos de quatro patas, que fazem a nossa vida e nosso dia a dia muito mais feliz.
-                           É um pouco de tudo isso que faz nosso casamento ser uma decisão tão leve, tão fácil e tão gostosa.</p>
+                    <p>
+                        E não tem como falar da gente sem falar dos nossos cachorros, né?! Nossos filhos de quatro patas, que fazem a nossa vida e nosso dia a dia muito mais feliz.
+                        É um pouco de tudo isso que faz nosso casamento ser uma decisão tão leve, tão fácil e tão gostosa.
+                    </p>
                     <p>Cada detalhe desse grande dia está sendo preparado com muito carinho. Contamos com a animação e presença de todos para tornarem o nosso casamento inesquecível!</p>
                 </div>
             </div>
         </div>
-</script>
+    </script>
 
-<script type="text/x-handlebars" data-template-name="padrinhos">
+    <script type="text/x-handlebars" data-template-name="padrinhos">
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Sobre os
+                    <h2 class="intro-text text-center">
+                        Sobre os
                         <strong>Padrinhos</strong>
                     </h2>
                     <hr>
@@ -202,10 +217,10 @@
                     </h2>
                     <hr>
                     <div class="centerize">
-                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/roger.jpg" class="img-circle img-responsive blesser-img">Roger</div>
-                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/leonardo.jpg" class="img-circle img-responsive blesser-img">Leonardo</div>
-                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/digao.jpg" class="img-circle img-responsive blesser-img">Rodrigo</div>
-                            <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/guilherme.jpg" class="img-circle img-responsive blesser-img">Guilherme</div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/roger.jpg" class="img-circle img-responsive blesser-img">Roger</div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/leonardo.jpg" class="img-circle img-responsive blesser-img">Leonardo</div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/digao.jpg" class="img-circle img-responsive blesser-img">Rodrigo</div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/guilherme.jpg" class="img-circle img-responsive blesser-img">Guilherme</div>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 centerize">
@@ -215,64 +230,141 @@
                     </h2>
                     <hr>
                     <div class="centerize">
-                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/mari.jpg" class="img-circle img-responsive blesser-img">Mari</div>
-                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/naty.JPG" class="img-circle img-responsive blesser-img">Naty</div>
-                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/fe.jpg" class="img-circle img-responsive blesser-img">Fe</div>
-                             <div class = "col-sm-6 col-md-6"><img src="img/padrinhos/p7.jpg" class="img-circle img-responsive blesser-img">Todas</div>
-                     </div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/mari.jpg" class="img-circle img-responsive blesser-img">Mari</div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/naty.JPG" class="img-circle img-responsive blesser-img">Naty</div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/fe.jpg" class="img-circle img-responsive blesser-img">Fe</div>
+                        <div class="col-sm-6 col-md-6"><img src="img/padrinhos/p7.jpg" class="img-circle img-responsive blesser-img">Todas</div>
+                    </div>
+
+                </div>
+
+                <p></p>
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Álbum</strong>
+                    </h2>
+                    <hr>
+
+                    <div class="album">
+                        <ul class="row">
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (1).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (2).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (3).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (4).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (5).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (6).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (7).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (8).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (9).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (10).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (11).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (12).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (13).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (14).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (15).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (16).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (17).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (18).jpg" /></li>
+                            <li class="imgGrouping"><img style="width:150px" src="img/galeria/casamento (19).jpg" /></li>
+                        </ul>
 
                     </div>
-                    <hr>
-                    <div class="clearfix"></div>
+
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+
+
+                </div>
+
+                <hr>
+                <div class="clearfix"></div>
             </div>
         </div>
-</script>
+    </script>
 
-<script type="text/x-handlebars" data-template-name="confirmacao">
+
+
+
+    <script type="text/x-handlebars" data-template-name="confirmacao">
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Confirmação de
+                    <h2 class="intro-text text-center">
+                        Confirmação de
                         <strong>Presença</strong>
                     </h2>
                     <hr>
                     <form action="//formspree.io/francielekb@me.com"
-                               class="col-sm-12 col-md-12 col-lg-12"
-                               method="POST">
-                            <div>
-                                <p>Confirme sua presença aqui:  </p>
-                                <p><strong>* </strong><small>Por favor, preencher um <strong>nome + sobrenome</strong> de cada vez.</small></p>
-                            </div>
-                                <input type="text" name="name" class="form-control">
-                                <br>
-                                <p>Telefone:</p>
-                                <input type="text" name="telefone" class="form-control">
-                                <!--input type="email" name="_replyto"-->
-                                <br>
-                                <input type="submit" class="btn btn-default btn-lg" value="Confirmar">
+                          class="col-sm-12 col-md-12 col-lg-12"
+                          method="POST">
+                        <div>
+                            <p>Confirme sua presença aqui:  </p>
+                            <p><strong>* </strong><small>Por favor, preencher um <strong>nome + sobrenome</strong> de cada vez.</small></p>
+                        </div>
+                        <input type="text" name="name" class="form-control">
+                        <br>
+                        <p>Telefone:</p>
+                        <input type="text" name="telefone" class="form-control">
+                        <!--input type="email" name="_replyto"-->
+                        <br>
+                        <input type="submit" class="btn btn-default btn-lg" value="Confirmar">
 
-                            <input type="hidden" name="_subject" value="Confirmação no casório!!" />
+                        <input type="hidden" name="_subject" value="Confirmação no casório!!" />
 
-                            <input type="hidden" name="_next" value="confirmado.html" />
+                        <input type="hidden" name="_next" value="confirmado.html" />
                     </form>
                     <div class="clearfix"></div>
+                </div>
+            </div>
+    </script>
+
+
+    <script type="text/x-handlebars" data-template-name="presentes">
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        Lista de
+                        <strong>Presentes</strong>
+                    </h2>
+                    <hr>
+                    <div class="centerize">
+                        <p>Nosso maior presente é a sua presença nesse dia tão importante.<br /> Mas, se quiser nos presentear, nossa lista com sugestões de presentes encontra-se nas lojas:</p>
+
+                        <p><p><a target="_blank" href="https://www.zaffari.com.br/ListaPresentesWeb/visualizarListaPresentes.action?idListaPresentes=420000022847&idLocalListaPresentes=42">Zaffari Bourbon</a> <br /><span style="font-size: 10px"> (disponível também nas lojas físicas)</span></p></p>
+
+                        <p><p><a target="_blank" href="http://www.robertosimoes.com.br/?pag=lista2&lista=46957">Roberto Simões</a><br /><span style="font-size: 10px"> (disponível também nas lojas físicas)</span></p></p>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="clearfix"></div>
             </div>
         </div>
-</script>
+    </script>
 
-<script type="text/x-handlebars" data-template-name="local" onload="displayMap();">
+    <script type="text/x-handlebars" data-template-name="local" onload="displayMap();">
 
         <div class="row">
             <div class="box">
                 <hr>
-                    <h2 class="intro-text text-center">
-                        <strong>Cerimônia </strong>
-                        &
-                        <strong> Festa</strong>
-                    </h2>
-                    <hr>
-                <div class="col-sm-8 col-md-8 col-lg-8" >
+                <h2 class="intro-text text-center">
+                    <strong>Cerimônia </strong>
+                    &
+                    <strong> Festa</strong>
+                </h2>
+                <hr>
+                <div class="col-sm-8 col-md-8 col-lg-8">
                     <div id="map" class="map"></div>
 
                     <button id="showmap" class="btn btn-default btn-lg" onclick="displayMap()">Mostrar Mapa</button>
@@ -286,7 +378,7 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-</script>
+    </script>
 
 
     <!-- Bootstrap Core JavaScript -->
@@ -298,19 +390,21 @@
     <script src="js/map.js"></script>
 
     <script>
-         $('.carousel').carousel({
-              interval: 5000 //changes the speed
-         })
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
     </script>
     <script>
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+           m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-                ga('create', 'UA-67700859-1', 'auto');
-                ga('send', 'pageview');
-        </script>
+        ga('create', 'UA-67700859-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 
 
